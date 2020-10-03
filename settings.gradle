@@ -1,2 +1,3 @@
+include ':kk4a'
 include ':app'
 rootProject.name = "BarVolume"
