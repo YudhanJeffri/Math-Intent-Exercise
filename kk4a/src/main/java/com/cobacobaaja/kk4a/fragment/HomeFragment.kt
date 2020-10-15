@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.cobacobaaja.kk4a.R
 import com.cobacobaaja.kk4a.fragment.listview.HeroFragment
+import com.cobacobaaja.kk4a.fragment.mytestingapp.MyTestingFragment
 
 class HomeFragment : Fragment(), View.OnClickListener {
 
@@ -27,6 +28,17 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val btn_mytest: Button = view.findViewById(R.id.btn_mytesting)
+        btn_mytest.setOnClickListener {
+            val mmm = MyTestingFragment()
+            val mFragmentManager = fragmentManager
+            mFragmentManager?.beginTransaction()?.apply {
+                replace(R.id.frame_container, mmm, MyTestingFragment::class.java.simpleName)
+                addToBackStack(null)
+                commit()
+            }
+        }
+
         val btn: Button = view.findViewById(R.id.btn_listview)
         btn.setOnClickListener {
             val mCategoryFragment = HeroFragment()

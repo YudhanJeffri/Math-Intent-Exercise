@@ -23,6 +23,9 @@
     <string name="name_heroes">Nama Pahlawan</string>
     <string name="lorem">lorem ipsum dolor sit amet</string>
 
+    <string name="set_value">Set Nilai</string>
+    <string name="hello_world">Hello World!</string>
+
 
     <string-array name="data_name">
         <item>Ahmad Dahlan</item>
